@@ -24,7 +24,7 @@
 **Detailed Requirement**:
 -Users should be able to select 1 to 5 stars when rating a product. Optionally, they can leave a written review (up to 200 characters). Users can edit or delete their review later through their account. Reviews and ratings will be displayed on each product’s page under a "Reviews" section. Profanity will be automatically filtered out.
 
-## **2. Age Verification for Alcoholic Products**
+### **2. Age Verification for Alcoholic Products**
 
 **Vague Requirement**:
 -Alcoholic products require age verification. A modal should appear when navigating to the alcoholic products category asking if the user is 18+. Users must input their age before accessing the alcoholic products.
@@ -39,7 +39,7 @@
 **Detailed Requirement**:
 -When a user tries to access the "Alcohol" category, a pop-up modal appears asking for their date of birth. If the user is under 18, they are redirected back to the homepage with a message stating they cannot view alcoholic products. Users who are 18+ can continue to browse normally. No personal data is saved from this modal at this stage.
 
-## **3. Shipping Cost Changes**
+### **3. Shipping Cost Changes**
 **Vague Requirement**:
 -Free shipping for orders above a certain amount. Orders below this amount will incur a shipping fee.
 
