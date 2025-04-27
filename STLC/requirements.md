@@ -48,3 +48,8 @@
 1. What is the specific minimum amount required to qualify for free shipping?
 2. Where should the shipping cost (or free shipping) be displayed — in the cart, during checkout, or both?
 3. Should applying promotional codes or discounts impact the eligibility for free shipping?
+
+**Detailed Requirement**:
+-Free shipping applies to orders totaling €50 or more (after discounts are applied). Orders below €50 will incur a €4 shipping fee. Shipping costs will be shown in the shopping cart and confirmed again on the checkout page. Only domestic orders qualify for this free shipping offer.
+
+
