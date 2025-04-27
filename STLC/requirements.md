@@ -11,7 +11,7 @@
 ### **1. Product Rating System**
 **Vague Requirement**:
 
-. Users should be able to rate products with a 5-star system and have the option to add written feedback.
+- Users should be able to rate products with a 5-star system and have the option to add written feedback.
 
 **Questions**:
 
@@ -22,12 +22,13 @@
 5. Can a user submit multiple ratings for the same product?
 
 **Detailed Requirement**:
--Users should be able to select 1 to 5 stars when rating a product. Optionally, they can leave a written review (up to 200 characters). Users can edit or delete their review later through their account. Reviews and ratings will be displayed on each product’s page under a "Reviews" section. Profanity will be automatically filtered out.
+
+- Users should be able to select 1 to 5 stars when rating a product. Optionally, they can leave a written review (up to 200 characters). Users can edit or delete their review later through their account. Reviews and ratings will be displayed on each product’s page under a "Reviews" section. Profanity will be automatically filtered out.
 
 ### **2. Age Verification for Alcoholic Products**
 
 **Vague Requirement**:
-. Alcoholic products require age verification. A modal should appear when navigating to the alcoholic products category asking if the user is 18+. Users must input their age before accessing the alcoholic products.
+- Alcoholic products require age verification. A modal should appear when navigating to the alcoholic products category asking if the user is 18+. Users must input their age before accessing the alcoholic products.
 
 **Questions**:
 
@@ -37,12 +38,13 @@
 4. What happens if a user inputs an invalid value (e.g., letters instead of numbers)?
 
 **Detailed Requirement**:
-. When a user tries to access the "Alcohol" category, a pop-up modal appears asking for their date of birth. If the user is under 18, they are redirected back to the homepage with a message stating they cannot view alcoholic products. Users who are 18+ can continue to browse normally. No personal data is saved from this modal at this stage.
+
+- When a user tries to access the "Alcohol" category, a pop-up modal appears asking for their date of birth. If the user is under 18, they are redirected back to the homepage with a message stating they cannot view alcoholic products. Users who are 18+ can continue to browse normally. No personal data is saved from this modal at this stage.
 
 ### **3. Shipping Cost Changes**
 **Vague Requirement**:
 
-. Free shipping for orders above a certain amount. Orders below this amount will incur a shipping fee.
+- Free shipping for orders above a certain amount. Orders below this amount will incur a shipping fee.
 
 **Questions**:
 
@@ -51,6 +53,7 @@
 3. Should applying promotional codes or discounts impact the eligibility for free shipping?
 
 **Detailed Requirement**:
-. Free shipping applies to orders totaling €50 or more (after discounts are applied). Orders below €50 will incur a €4 shipping fee. Shipping costs will be shown in the shopping cart and confirmed again on the checkout page. Only domestic orders qualify for this free shipping offer.
+
+- Free shipping applies to orders totaling €50 or more (after discounts are applied). Orders below €50 will incur a €4 shipping fee. Shipping costs will be shown in the shopping cart and confirmed again on the checkout page. Only domestic orders qualify for this free shipping offer.
 
 
