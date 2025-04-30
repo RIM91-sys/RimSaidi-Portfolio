@@ -1,6 +1,6 @@
  ## **The software**
 
-MarketMate Webshop, with the following existing functionalities:
+Market Mate’s  Webshop, with the following existing functionalities:
 - Register and login functionality
 - Search for products, sort by price, browse by categories
 - Add products to favorites
