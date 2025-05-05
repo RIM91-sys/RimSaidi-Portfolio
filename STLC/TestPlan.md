@@ -45,24 +45,24 @@ The product allows users to:
 ### **Scope of Testing**
 
 - **In Scope:**
-- Product search functionality
-- Adding products to the shopping cart
-- Checkout process and order placement
-- User account creation and management
-- Secure payment processing
-- Submitting product ratings (1–5 stars) and optional written reviews (up to 200 characters)
-- Editing and deleting submitted reviews
-- Displaying ratings and reviews under a "Reviews" section with profanity filtering
-- Age verification modal when accessing the "Alcohol" category
-- Redirecting users under 18 years old after age verification
-- Applying free shipping for orders over €50 and showing shipping costs in the cart and at checkout
-- Display and calculation of shipping costs based on cart value
+    - Product search functionality
+    - Adding products to the shopping cart
+    - Checkout process and order placement
+    - User account creation and management
+    - Secure payment processing
+    - Submitting product ratings (1–5 stars) and optional written reviews (up to 200 characters)
+    - Editing and deleting submitted reviews
+    - Displaying ratings and reviews under a "Reviews" section with profanity filtering
+    - Age verification modal when accessing the "Alcohol" category
+    - Redirecting users under 18 years old after age verification
+    - Applying free shipping for orders over €50 and showing shipping costs in the cart and at checkout
+    - Display and calculation of shipping costs based on cart value
 
 - **Out of Scope:**
-- Long-term storage or reuse of user-provided age data
-- Document upload or advanced identity verification for age checks
-- International shipping rules or costs
-- Backend database operations not visible to users (e.g., server-side review management)
+    - Long-term storage or reuse of user-provided age data
+    - Document upload or advanced identity verification for age checks
+    - International shipping rules or costs
+    - Backend database operations not visible to users (e.g., server-side review management)
 
 ### **Type of Testing**
 
