@@ -20,12 +20,10 @@ Example software: ShopFresh
     - **Test Case**: Verify submission of a review when review exceeds 200 characters.
         - **Input**: Review text = 201 characters, Rating = 4 stars
         - **Expected Outcome**: Error message: "Review must not exceed 200 characters."
-
 3. **Equivalence Partitioning**:
     - **Test Case**: Submit a rating without text.
         - **Input**: Rating = 3 stars, Review text = empty
         - **Expected Outcome**: Review submitted successfully (since text is optional) and shown under product reviews.
-
 4. **Error Guessing**:
     - **Test Case**: Submit a review with inappropriate language.
         - **Input**: Review = "This product is ****", Rating = 2 stars
@@ -64,7 +62,7 @@ Example software: ShopFresh
 
 ### **3. Shipping Cost Changes**
 
-** Test Design Techniques: Boundary Value Analysis (BVA), Equivalence Partitioning (EP), Use Case Testing
+**Test Design Techniques**: Boundary Value Analysis (BVA), Equivalence Partitioning (EP), Use Case Testing
 
 ### Test Cases:
 
