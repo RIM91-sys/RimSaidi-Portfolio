@@ -34,6 +34,7 @@ The product allows users to:
 - Complete checkout and place orders
 - Create and manage user accounts
 - Process payments securely
+  
 **To Be Added Functionality:**
 - Allow users to rate products with a 1–5 star system and optional written reviews (up to 200 characters), with the ability to edit or delete their reviews.
 - Display ratings and reviews under a "Reviews" section on each product page, with profanity filtering.
