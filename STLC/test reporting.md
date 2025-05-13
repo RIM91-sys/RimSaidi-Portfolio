@@ -90,7 +90,7 @@ A user 18 years or older can access alcohol product pages
 <img width="1368" alt="Screenshot 2025-05-13 at 13 41 37" src="https://github.com/user-attachments/assets/b4594688-ad43-4c83-b928-29db1794384a" />
 <img width="1439" alt="Screenshot 2025-05-13 at 13 42 51" src="https://github.com/user-attachments/assets/e51ff273-a2d5-4f28-a268-785b9f8b698b" />
 
-## Feature 2: Shipping Cost Changes
+## Feature 3: Shipping Cost Changes
 
 ### Scenario 1: Shipping Cost – Below Free Shipping Threshold
 
