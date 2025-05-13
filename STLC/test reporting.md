@@ -1,4 +1,4 @@
-Here's the test execution documentation using the same template and format as your example, adapted for the GroceryMate website and the three tested features: **Product Rating and Reviews**, **Age Verification for Alcohol Category**, and **Shipping Cost Changes**.
+Here's the test execution documentation adapted for the GroceryMate website and the three tested features: **Product Rating and Reviews**, **Age Verification for Alcohol Category**, and **Shipping Cost Changes**.
 # GroceryMate - Test Execution Report
 
 ## Feature 1: Product Rating and Reviews
