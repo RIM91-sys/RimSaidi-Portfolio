@@ -2,7 +2,7 @@ Here's the test execution documentation adapted for the GroceryMate website and 
 # GroceryMate - Test Execution Report
 
 ## Feature 1: Product Rating and Reviews
-###Scenario 1: Product Review – Purchase Required
+### Scenario 1: Product Review – Purchase Required
 
 As a user, I can only leave a review for a product after I have purchased it.
 
@@ -18,7 +18,7 @@ As a user, I can only leave a review for a product after I have purchased it.
 
 <img width="1044" alt="Screenshot 2025-05-13 at 13 19 29" src="https://github.com/user-attachments/assets/b46d8e27-d02b-4f23-8eec-1f69f093afe5" />
 
-###Scenario 2: Add Product Review (Valid Input)
+### Scenario 2: Add Product Review (Valid Input)
 
 | Step# | Action                                            | Expected outcome                | OK/NOK | URL                                                | Link to issue |
 | ----- | ------------------------------------------------- | ------------------------------- | ------ | ---------------------------------------------------| ------------- |
@@ -29,7 +29,7 @@ As a user, I can only leave a review for a product after I have purchased it.
 | 4b    | Enter review text: "Great taste, will buy again!" | Text input accepted             | OK     |                                                    |               |
 | 5     | Click “Submit Review”                             | Review is added and shown below | OK     |                                                    |               |
 
-###Scenario 3: Post Review with Empty Text
+### Scenario 3: Post Review with Empty Text
 Users should be able to submit a rating without writing a comment. Review text is optional (max 200 characters).
 
 | Step# | Action                                                                  | Expected Outcome                                       | OK/NOK | URL                                               | Link to issue |
@@ -44,7 +44,7 @@ Users should be able to submit a rating without writing a comment. Review text i
 
 ## Feature 2: Age Verification for Alcohol Category
 
-###Scenario 1: Age Verification - Underage User Blocked from Alcohol
+### Scenario 1: Age Verification - Underage User Blocked from Alcohol
 
 A user under 18 cannot access alcohol product pages.
 | Step# | Action                                   | Expected outcome                                   | OK/NOK | URL                                  | Link to issue |
@@ -63,7 +63,7 @@ A user under 18 cannot access alcohol product pages.
 <img width="1439" alt="Screenshot 2025-05-13 at 13 42 51" src="https://github.com/user-attachments/assets/cfd8dab2-8440-43dc-b2ba-691394021873" />
 
 
-###Scenario 2: Age Verification - Adult User Gets Access
+### Scenario 2: Age Verification - Adult User Gets Access
 
 A user 18 years or older can access alcohol product pages
 | Step# | Action                                   | Expected outcome                         | OK/NOK | URL               | Link to issue |
@@ -77,7 +77,7 @@ A user 18 years or older can access alcohol product pages
 <img width="1438" alt="Screenshot 2025-05-13 at 13 52 13" src="https://github.com/user-attachments/assets/6fb93598-b90f-46d6-a61e-3c6c5e031c35" />
 <img width="1447" alt="Screenshot 2025-05-13 at 13 53 22" src="https://github.com/user-attachments/assets/f2bb929d-2af4-4582-9828-7ae32e913cf9" />
 
-###Scenario 3: Age Verification - User Input Invalid Age Value
+### Scenario 3: Age Verification - User Input Invalid Age Value
 
 | Step# | Action                                   | Expected Outcome                                       | OK/NOK | URL                                       | Link to issue |
 |-------|------------------------------------------|--------------------------------------------------------|--------|-------------------------------------------|----------------|
@@ -92,7 +92,7 @@ A user 18 years or older can access alcohol product pages
 
 ## Feature 2: Shipping Cost Changes
 
-###Scenario 1: Shipping Cost – Below Free Shipping Threshold
+### Scenario 1: Shipping Cost – Below Free Shipping Threshold
 
 When cart total is below €20, a shipping fee is applied.
 | Step# | Action                      | Expected outcome            | OK/NOK | URL       | Link to issue |
@@ -105,7 +105,7 @@ When cart total is below €20, a shipping fee is applied.
 | 6     | View shipping cost          | €5 shipping fee is shown | OK     |           |               |
 <img width="1302" alt="Screenshot 2025-05-13 at 16 13 25" src="https://github.com/user-attachments/assets/ddd34930-e4d4-4cf5-8902-d6a86440319f" />
 
-###Scenario 2: Shipping Cost – Above Free Shipping Threshold
+### Scenario 2: Shipping Cost – Above Free Shipping Threshold
 
 When cart total is €20 or more, shipping is free.
 | Step# | Action                      | Expected outcome      | OK/NOK | URL       | Link to issue |
