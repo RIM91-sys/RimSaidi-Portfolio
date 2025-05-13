@@ -96,17 +96,19 @@ When cart total is below €20, a shipping fee is applied.
 | 1     | Log in to GroceryMate                    | User is successfully logged in           | OK     | https://grocerymate.masterschool.com/|               |
 | 2     | Click “Shop”                             | Age check appears                        | OK     | /store                               |                |
 | 3     | Enter birthdate: 2007-01-01 (user is 18) | Submission accepted  | OK     |                   |               |                  
-| 4     | Add items worth €19 to cart | Items added                 | OK     | /checkout    |               |
+| 4     | Add items worth €19,99 or less to cart | Items added                 | OK     | /checkout    |               |
 | 5     | Proceed to checkout         | Checkout page loads         | OK     | /checkout |               |
 | 6     | View shipping cost          | €5 shipping fee is shown | OK     |           |               |
+<img width="1302" alt="Screenshot 2025-05-13 at 16 13 25" src="https://github.com/user-attachments/assets/ddd34930-e4d4-4cf5-8902-d6a86440319f" />
 
-Scenario 6: Shipping Cost – Above Free Shipping Threshold
-When cart total is €50 or more, shipping is free.
+Scenario 7: Shipping Cost – Above Free Shipping Threshold
+When cart total is €20 or more, shipping is free.
 | Step# | Action                      | Expected outcome      | OK/NOK | URL       | Link to issue |
 | ----- | --------------------------- | --------------------- | ------ | --------- | ------------- |
 | 1     | Log in to GroceryMate                    | User is successfully logged in           | OK     | https://grocerymate.masterschool.com/|               |
 | 2     | Click “Shop”                             | Age check appears                        | OK     | /store                               |                |
 | 3     | Enter birthdate: 2007-01-01 (user is 18) | Submission accepted  | OK     |                   |               |                  
-| 4     | Add items worth €21 to cart | Items added                 | OK     | /checkout     |               |
-| 5     | Check shipping fee          | Shipping = Free       | OK     |           |               |
-| 6     | Proceed to checkout         | Checkout page loads         | OK     | /checkout |               |
+| 4     | Add items worth €20 or more to cart | Items added                 | OK     | /checkout     |               |
+| 5     | Proceed to checkout         | Checkout page loads         | OK     | /checkout |               |
+| 6     | Check shipping fee          | Shipping = Free       | OK     |           |               |
+<img width="1264" alt="Screenshot 2025-05-13 at 16 14 25" src="https://github.com/user-attachments/assets/ba579f35-0c3e-4356-8029-1d6b7aa8a79c" />
