@@ -39,7 +39,7 @@ The product allows users to:
 - Allow users to rate products with a 1–5 star system and optional written reviews (up to 200 characters), with the ability to edit or delete their reviews.
 - Display ratings and reviews under a "Reviews" section on each product page, with profanity filtering.
 - Implement age verification when accessing the "Alcohol" category by requiring users to enter their date of birth. Users under 18 are redirected to the homepage.
-- Introduce free shipping for orders over €50 (after discounts), with a €4 shipping fee for orders below €20, visible in the cart and at checkout.
+- Introduce free shipping for orders over €20 (after discounts), with a €4 shipping fee for orders below €20, visible in the cart and at checkout.
 
 ## **2. Design the Test Strategy**
 
