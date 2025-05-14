@@ -25,9 +25,9 @@ Example software: ShopFresh
         - **Input**: Rating = 3 stars, Review text = empty
         - **Expected Outcome**: Review submitted successfully (since text is optional) and shown under product reviews.
 4. **Error Guessing**:
-    - **Test Case**: Submit a review with inappropriate language.
-        - **Input**: Review = "This product is ****", Rating = 2 stars
-        - **Expected Outcome**: Error message: "Review contains inappropriate content."
+    - **Test Case**: 
+        - **Input**: Review = 
+        - **Expected Outcome**: 
 
 ### **2. Age Verification for Alcohol Category**
 
