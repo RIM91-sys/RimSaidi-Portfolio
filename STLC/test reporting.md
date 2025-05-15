@@ -27,7 +27,10 @@ As a user, I can only leave a review for a product after I have purchased it.
 | 3     | Scroll to reviews section                         | Review input is visible         | OK     |                                                    |               |
 | 4a    | Rate product (e.g. 4 stars)                       | Stars are selected              | OK     |                                                    |               |
 | 4b    | Enter review text: "Great taste, will buy again!" | Text input accepted             | OK     |                                                    |               |
-| 5     | Click “Submit Review”                             | Review is added and shown below | OK     |                                                    |               |
+| 5     | Click “Send”                             |Review with stars only is accepted and displayed, so I expect that when a text comment is also provided, the review should display both the rating and the comment  | NOK     |                                                    |               |
+<img width="1176" alt="Screenshot 2025-05-16 at 01 41 31" src="https://github.com/user-attachments/assets/8bb0759f-06a8-427f-b856-25c65848b7de" />
+<img width="1268" alt="Screenshot 2025-05-16 at 01 41 42" src="https://github.com/user-attachments/assets/7e77e960-3b28-48dd-b389-7c3e76f914fd" />
+
 
 ### Scenario 3: Post Review with Empty Text
 Users should be able to submit a rating without writing a comment. Review text is optional (max 200 characters).
@@ -38,9 +41,8 @@ Users should be able to submit a rating without writing a comment. Review text i
 | 2     | Log in as a registered user who previously purchased a product          | Login successful                                       | OK     | /auth                                             |                |
 | 3     | Navigate to the purchased product page (e.g., “Braeburn Apples”)        | Product detail page displays                           | OK     | /product/66b3a57b3fd5048eacb47999                 |                |
 | 4     | Scroll to “Reviews” section                                             | Review panel is visible                                | OK     | Product detail page                               |                |
-| 5     | Click on “Leave a Review”                                               | Review modal/panel appears                             | OK     |                                                   |                |
-| 6     | Select 4 stars without typing any text                                  | Star selection registered/ Stars highlighted           | OK     |                                                   |                |
-| 7     | Leave the text area empty  and Click “Submit Review”                    | Review with stars only is accepted and displayed       | OK     |                                                   |                |
+| 5     | Select 4 stars without typing any text                                  | Star selection registered/ Stars highlighted           | OK     |                                                   |                |
+| 6     | Leave the text area empty  and Click “Send”                    | Review with stars only is accepted and displayed       | OK     |                                                   |                |
 
 ## Feature 2: Age Verification for Alcohol Category
 
