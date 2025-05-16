@@ -11,7 +11,7 @@
 
 ### Test Cases:
 1. **Use Case Testing**:
-       - **Test Case**:Verify review option availability.
+      - **Test Case**:Verify review option availability.
          - **Input**: User visits a product page without having purchased the product.
          - **Expected Outcome**: Review submission is disabled. Message displayed: "You need to buy this product to tell us your opinion!"
 3. **Use Case Testing**:
