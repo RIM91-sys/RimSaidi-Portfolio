@@ -31,17 +31,17 @@ As a user, I can only leave a review for a product after I have purchased it.
 <img width="1176" alt="Screenshot 2025-05-16 at 01 41 31" src="https://github.com/user-attachments/assets/8bb0759f-06a8-427f-b856-25c65848b7de" />
 <img width="1268" alt="Screenshot 2025-05-16 at 01 41 42" src="https://github.com/user-attachments/assets/7e77e960-3b28-48dd-b389-7c3e76f914fd" />
 
-### Scenario 3: Edit Existing Product Review to Add Comment (Error Guessing)
+### Scenario 3: Edit Existing Product Review to Add Comment 
 
 | Step# | Action                                                        | Expected outcome                                                        | OK/NOK | URL                                                                            | Link to issue |
 | ----- | ------------------------------------------------------------- | ----------------------------------------------------------------------- | ------ | ------------------------------------------------------------------------------ | ------------- |
 | 1     | Log in to GroceryMate                                         | User is successfully logged in                                          | OK     | [https://grocerymate.masterschool.com/](https://grocerymate.masterschool.com/) |               |
 | 2     | Navigate to a previously reviewed product                     | Product page with existing review loads                                 | OK     | /store/product/123                                                             |               |
-| 3     | Scroll to reviews section                                     | Existing review is visible with 5-star rating                           | OK     |                                                                                |               |
+| 3     | Scroll to reviews section                                     | Existing review is visible with 4-star rating                           | OK     |                                                                                |               |
 | 4     | Click “Edit” on the existing review                           | Review text box and star rating are now editable                        | OK     |                                                                                |               |
 | 5     | Add comment: "Great taste, will buy again!" and retain existing 4-star rating | Text field accepts new input, star selection remains                    | OK     |                                                                                |               |
-| 6     | Click “Save Changes”                                                  | Review now displays: 5-star rating and comment: "Good quality"          | OK     |                                                                                |               |
-| 7     | Refresh the page to validate persistence                      | Edited review still displays both the 5-star rating and the new comment | OK     |                                                                                |               |
+| 6     | Click “Save Changes”                                                  | Review now displays: 4-star rating and comment: "Great taste, will buy again!"          | OK     |                                                                                |               |
+| 7     | Refresh the page to validate persistence                      | Edited review still displays both the 4-star rating and the new comment | OK     |                                                                                |               |
 | 8     | Check for duplicate or overwritten data                       | Only one review appears; updated correctly                              | OK     |                                                                                |               |
 
 <img width="1470" alt="Screenshot 2025-05-16 at 01 42 04" src="https://github.com/user-attachments/assets/d710b81e-e13e-472a-a88d-f80b5d2e11ea" />
@@ -59,7 +59,26 @@ Users should be able to submit a rating without writing a comment. Review text i
 | 3     | Navigate to the purchased product page (e.g., “Braeburn Apples”)        | Product detail page displays                           | OK     | /product/66b3a57b3fd5048eacb47999                 |                |
 | 4     | Scroll to “Reviews” section                                             | Review panel is visible                                | OK     | Product detail page                               |                |
 | 5     | Select 4 stars without typing any text                                  | Star selection registered/ Stars highlighted           | OK     |                                                   |                |
-| 6     | Leave the text area empty  and Click “Send”                    | Review with stars only is accepted and displayed       | OK     |                                                   |                |
+| 6     | Leave the text area empty  and Click “Send”                    | Review with stars only is accepted and displayed       | OK     |    
+
+<img width="1084" alt="Screenshot 2025-05-16 at 13 27 47" src="https://github.com/user-attachments/assets/095ff17f-0d88-43fe-96ad-2f9c104447f0" />
+                                               |                |
+<img width="1282" alt="Screenshot 2025-05-16 at 13 28 32" src="https://github.com/user-attachments/assets/746eace8-6ab5-4fc8-b6ac-27348d8dae2e" />
+
+### Scenario 5: Delete Submitted Review
+
+| Step# | Action                                                          | Expected outcome                                                       | OK/NOK | URL                                                                            | Link to issue |
+| ----- | --------------------------------------------------------------- | ---------------------------------------------------------------------- | ------ | ------------------------------------------------------------------------------ | ------------- |
+| 1     | Log in to GroceryMate                                           | User is successfully logged in                                         | OK     | [https://grocerymate.masterschool.com/](https://grocerymate.masterschool.com/) |               |
+| 2     | Navigate to a product with an existing user review              | Product page loads and displays the user’s previously submitted review | OK     | /store/product/456                                                             |               |
+| 3     | Scroll to the review section                                    | Review is visible with rating and/or comment                           | OK     |                                                                                |               |
+| 4     | Click “Delete” button                                    | Confirmation dialog appears asking to confirm deletion with a message:"Are you sure you want to delete this review?"                | OK     |                                                                                |               |
+| 5     | Confirm deletion                                                | Review is deleted                              | OK     |                                                                                |               |
+| 6     | Refresh product page                                            | No review is displayed; Review text box and star rating is visible          | OK     |                                                                                |               |
+<img width="1239" alt="Screenshot 2025-05-16 at 13 45 46" src="https://github.com/user-attachments/assets/12b86ed0-3133-42cc-b446-21284eb484ba" />
+<img width="1103" alt="Screenshot 2025-05-16 at 13 46 36" src="https://github.com/user-attachments/assets/3aa1bbf6-3836-49ab-95c5-aebcc50eea2a" />
+<img width="1124" alt="Screenshot 2025-05-16 at 13 47 19" src="https://github.com/user-attachments/assets/4faa3cc8-19a2-4950-a720-51b1870375dd" />
+
 
 ## Feature 2: Age Verification for Alcohol Category
 
