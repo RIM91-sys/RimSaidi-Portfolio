@@ -7,7 +7,7 @@
 
 ### **1. Product Rating and Reviews**
 
-**Test Design Techniques**: Boundary Value Analysis (BVA), Equivalence Partitioning (EP), Error Guessing
+**Test Design Techniques**: Use Case Testing,  Boundary Value Analysis (BVA), Equivalence Partitioning (EP), Error Guessing
 
 ### Test Cases:
 1. **Use Case Testing**:
