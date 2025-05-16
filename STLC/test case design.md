@@ -42,19 +42,23 @@
     - **Test Case**: Submit a review with only whitespace characters.
         - **Input**: Review text = "   "; Rating = 3 stars.
         - **Expected Outcome**: Review submitted successfully and Rating shown under product reviews.
-10. **Error Guessing**:
+10. **Equivalence Partitioning**:
+    - **Test Case**: Delete an existing product review
+        - **Input**: User has submitted a review. User clicks on "Delete Review" and confirms deletion in the confirmation dialog.
+        - **Expected Outcome**: Review is permanently removed. No review (rating or comment) appears under the product for this user. Option to submit a new review becomes available.
+11. **Error Guessing**:
     - **Test Case**: Attempt to submit a review without selecting a rating.
         - **Input**: Review text = "Not Satisfied"; Rating = not selected.
         - **Expected Outcome**: Error message displayed: "Invalid input for the field 'Rating! Please check your input." The review is not saved or displayed.
-11. **Error Guessing**:
+12. **Error Guessing**:
      - **Test Case**: Verify that user cannot edit a review to select a 0-star rating.
         - **Input**: Attempt to edit an existing review (with 1–5 stars) and change the rating to 0 stars.
         - **Expected Outcome**: The 0-star option is not available in the rating selection. User cannot choose a rating below 1 star. Existing rating remains unchanged unless a valid (1–5 stars) rating is selected.      
-12. **Error Guessing**: 
+13. **Error Guessing**: 
      - **Test Case**: Edit existing review to add a comment
         - **Input**: Edit the previously submitted 5-star review, add comment = "Good quality", and submit.
         - **Expected Outcome**: Comment is now visible under the product review, along with the rating.
-13. **Error Guessing**:
+14. **Error Guessing**:
      - **Test Case**: Submit multiple reviews for the same product by the same user.
         - **Input**: Submit two reviews for the same product.
         - **Expected Outcome**: Second submission is either prevented with a message: "You have already reviewed this product." Only the first review appears on the product page.
