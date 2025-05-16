@@ -12,8 +12,8 @@ As a user, I can only leave a review for a product after I have purchased it.
 | 1     | Log in to GroceryMate                                | User is successfully logged in                                                   | OK     | https://grocerymate.masterschool.com/      |                |
 | 2     | Click “Shop” and browse categories                   | Product listing appears                                                          | OK     | /store                                     |                |
 | 3     | Click on "Fresh Vegetables" category                 | Category page loads                                                              | OK     | /store#                                    |                |
-| 4     | Click on product “Braeburn Apples”                   | Product detail page opens                                                        | OK     | /product/66b3a57b3fd5048eacb4798f          |                |
-| 5     | Scroll to the review section                         | Message shown: “You need to buy this product to tell us your opinion!”           | OK     | /product/66b3a57b3fd5048eacb4798f          |                |
+| 4     | Click on product “Oranges”                   | Product detail page opens                                                        | OK     | product/66b3a57b3fd5048eacb4798f          |                |
+| 5     | Scroll to the review section                         | Message shown: “You need to buy this product to tell us your opinion!”           | OK     | product/66b3a57b3fd5048eacb4798f         |                |
 | 6     | Attempt to leave a review without purchasing         | System blocks input field / review button                                        | OK     |                                            |                |
 
 <img width="1044" alt="Screenshot 2025-05-13 at 13 19 29" src="https://github.com/user-attachments/assets/b46d8e27-d02b-4f23-8eec-1f69f093afe5" />
