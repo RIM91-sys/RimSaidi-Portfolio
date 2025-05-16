@@ -10,47 +10,51 @@
 **Test Design Techniques**: Boundary Value Analysis (BVA), Equivalence Partitioning (EP), Error Guessing
 
 ### Test Cases:
-11. **Use Case Testing**:
-       - **Test Case**:Verify review option availability
-         - **Input**: User visits a product page without having purchased the product
+1. **Use Case Testing**:
+       - **Test Case**:Verify review option availability.
+         - **Input**: User visits a product page without having purchased the product.
          - **Expected Outcome**: Review submission is disabled. Message displayed: "You need to buy this product to tell us your opinion!"
-1. **Boundary Value Analysis**:
-    - **Test Case**: Verify submission of a review with exactly 500 characters.
-        - **Input**: Review text = 500 characters, Rating = 5 stars
-        - **Expected Outcome**: review not submitted error message :"You cannot tell us more about this product."
-2. **Boundary Value Analysis**:
-    - **Test Case**: Verify submission of a review with exactly 499 characters.
-        - **Input**: Review text = 499 characters, Rating = 5 stars
-        - **Expected Outcome**: Review is saved successfully. On the product page, only the star rating is displayed, and the comment section is hidden.
+2. **Use Case Testing**:
+      - **Test Case**: Verify review option availability for purchased product.
+         - **Input**: User visits a product page after purchasing the product.
+         - **Expected Outcome**: Review submission is enabled. Message displayed: "Add a comment"
 3. **Boundary Value Analysis**:
+    - **Test Case**: Verify submission of a review with exactly 500 characters.
+        - **Input**: Review text = 500 characters, Rating = 5 stars.
+        - **Expected Outcome**: review not submitted error message :"You cannot tell us more about this product."
+4. **Boundary Value Analysis**:
+    - **Test Case**: Verify submission of a review with exactly 499 characters.
+        - **Input**: Review text = 499 characters, Rating = 5 stars.
+        - **Expected Outcome**: Review is saved successfully. On the product page, only the star rating is displayed, and the comment section is hidden.
+5. **Boundary Value Analysis**:
     - **Test Case**: Verify submission of a review when review exceeds 500 characters.
-        - **Input**: Review text = 501 characters, Rating = 4 stars
+        - **Input**: Review text = 501 characters, Rating = 4 stars.
         - **Expected Outcome**: Error message: "You cannot tell us more about this product"
-4. **Equivalence Partitioning**:        
+6. **Equivalence Partitioning**:        
     - **Test Case**: Edit a rating-only review without adding a comment.
         - **Input**: Edit an existing review by changing the star rating (e.g., from 5 stars to 2 stars), leave the comment field empty, and click "Save Changes".
         - **Expected Outcome**: The new star rating is saved and updated correctly. On the product page, the updated rating is displayed, and no comment is shown.
-5. **Equivalence Partitioning**: 
+7. **Equivalence Partitioning**: 
     - **Test Case**: Submit a review with special characters and emojis.
-        - **Input**: Review text = "Great taste! 😋👍 #Delicious"; Rating = 5 stars
+        - **Input**: Review text = "Great taste! 😋👍 #Delicious"; Rating = 5 stars.
         - **Expected Outcome**: Review submitted successfully and special characters/emojis are rendered correctly.
-6. **Equivalence Partitioning**:
+8. **Equivalence Partitioning**:
     - **Test Case**: Submit a review with only whitespace characters.
-        - **Input**: Review text = "   "; Rating = 3 stars
+        - **Input**: Review text = "   "; Rating = 3 stars.
         - **Expected Outcome**: Review submitted successfully and Rating shown under product reviews.
-7. **Error Guessing**:
-    - **Test Case**: Attempt to submit a review without selecting a rating
-        - **Input**: Review text = "Not Satisfied"; Rating = not selected
-        - **Expected Outcome**: Error message displayed: "Invalid input for the field 'Rating! Please check your input."The review is not saved or displayed.
-8. **Error Guessing**:
+9. **Error Guessing**:
+    - **Test Case**: Attempt to submit a review without selecting a rating.
+        - **Input**: Review text = "Not Satisfied"; Rating = not selected.
+        - **Expected Outcome**: Error message displayed: "Invalid input for the field 'Rating! Please check your input." The review is not saved or displayed.
+10. **Error Guessing**:
      - **Test Case**: Verify that user cannot edit a review to select a 0-star rating.
         - **Input**: Attempt to edit an existing review (with 1–5 stars) and change the rating to 0 stars.
         - **Expected Outcome**: The 0-star option is not available in the rating selection. User cannot choose a rating below 1 star. Existing rating remains unchanged unless a valid (1–5 stars) rating is selected.      
-9. **Error Guessing**: 
+11. **Error Guessing**: 
      - **Test Case**: Edit existing review to add a comment
         - **Input**: Edit the previously submitted 5-star review, add comment = "Good quality", and submit.
         - **Expected Outcome**: Comment is now visible under the product review, along with the rating.
-10. **Error Guessing**:
+12. **Error Guessing**:
      - **Test Case**: Submit multiple reviews for the same product by the same user.
         - **Input**: Submit two reviews for the same product.
         - **Expected Outcome**: Second submission is either prevented with a message: "You have already reviewed this product." Only the first review appears on the product page.
