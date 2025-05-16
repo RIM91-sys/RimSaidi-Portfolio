@@ -31,8 +31,25 @@ As a user, I can only leave a review for a product after I have purchased it.
 <img width="1176" alt="Screenshot 2025-05-16 at 01 41 31" src="https://github.com/user-attachments/assets/8bb0759f-06a8-427f-b856-25c65848b7de" />
 <img width="1268" alt="Screenshot 2025-05-16 at 01 41 42" src="https://github.com/user-attachments/assets/7e77e960-3b28-48dd-b389-7c3e76f914fd" />
 
+### Scenario 3: Edit Existing Product Review to Add Comment (Error Guessing)
 
-### Scenario 3: Post Review with Empty Text
+| Step# | Action                                                        | Expected outcome                                                        | OK/NOK | URL                                                                            | Link to issue |
+| ----- | ------------------------------------------------------------- | ----------------------------------------------------------------------- | ------ | ------------------------------------------------------------------------------ | ------------- |
+| 1     | Log in to GroceryMate                                         | User is successfully logged in                                          | OK     | [https://grocerymate.masterschool.com/](https://grocerymate.masterschool.com/) |               |
+| 2     | Navigate to a previously reviewed product                     | Product page with existing review loads                                 | OK     | /store/product/123                                                             |               |
+| 3     | Scroll to reviews section                                     | Existing review is visible with 5-star rating                           | OK     |                                                                                |               |
+| 4     | Click “Edit” on the existing review                           | Review text box and star rating are now editable                        | OK     |                                                                                |               |
+| 5     | Add comment: "Great taste, will buy again!" and retain existing 4-star rating | Text field accepts new input, star selection remains                    | OK     |                                                                                |               |
+| 6     | Click “Save Changes”                                                  | Review now displays: 5-star rating and comment: "Good quality"          | OK     |                                                                                |               |
+| 7     | Refresh the page to validate persistence                      | Edited review still displays both the 5-star rating and the new comment | OK     |                                                                                |               |
+| 8     | Check for duplicate or overwritten data                       | Only one review appears; updated correctly                              | OK     |                                                                                |               |
+
+<img width="1470" alt="Screenshot 2025-05-16 at 01 42 04" src="https://github.com/user-attachments/assets/d710b81e-e13e-472a-a88d-f80b5d2e11ea" />
+
+<img width="1285" alt="Screenshot 2025-05-16 at 01 42 27" src="https://github.com/user-attachments/assets/859173a2-3a6c-4830-8902-ea71d81e1df4" />
+
+
+### Scenario 4: Post Review with Empty Text
 Users should be able to submit a rating without writing a comment. Review text is optional (max 200 characters).
 
 | Step# | Action                                                                  | Expected Outcome                                       | OK/NOK | URL                                               | Link to issue |
