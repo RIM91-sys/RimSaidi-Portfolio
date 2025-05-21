@@ -27,7 +27,7 @@ As a user, I can only leave a review for a product after I have purchased it.
 | 3     | Scroll to reviews section                         | Review input is visible         | OK     |                                                    |               |
 | 4a    | Rate product (e.g. 4 stars)                       | Stars are selected              | OK     |                                                    |               |
 | 4b    | Enter review text: "Great taste, will buy again!" | Text input accepted             | OK     |                                                    |               |
-| 5     | Click “Send”                             |Review with stars only is accepted and displayed, so I expect that when a text comment is also provided, the review should display both the rating and the comment  | NOK     |                                                    |               |
+| 5     | Click “Send”                             |Review with stars only is accepted and displayed, so I expect that when a text comment is also provided, the review should display both the rating and the comment  | NOK     |                                                    |  https://github.com/RIM91-sys/RimSaidi-Portfolio/issues/4             |
 <img width="1176" alt="Screenshot 2025-05-16 at 01 41 31" src="https://github.com/user-attachments/assets/8bb0759f-06a8-427f-b856-25c65848b7de" />
 <img width="1268" alt="Screenshot 2025-05-16 at 01 41 42" src="https://github.com/user-attachments/assets/7e77e960-3b28-48dd-b389-7c3e76f914fd" />
 
