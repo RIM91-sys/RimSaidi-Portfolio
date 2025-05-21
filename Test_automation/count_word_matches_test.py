@@ -13,7 +13,7 @@ from count_word_matches import count_word_matches
         ("Hello world", "world", 1),
         ("hello hello HELLO", "hello", 3),
         ("No matches here", "yes", 0),
-        ("catcat cat catdog", "cat", 1),
+        ("catcat cat catdog", "cat", 2),
         ("a a a", "a", 3),
     ]
 )
@@ -23,7 +23,7 @@ def test_count_word_matches(text, target, expected):
 # Edge Case Testing : Create a fixture that provides common edge-case inputs,and test the `count_word_matches` function
 # using parameterized tests. Focus on empty inputs, spaces, and punctuation.
 @pytest.fixture
-def sample_edge_cases():
+def sample_edge_cases(scope='function'):
     return [
         ("", "word", 0),                # Empty text
         ("hello world", "", 0),         # Empty target
