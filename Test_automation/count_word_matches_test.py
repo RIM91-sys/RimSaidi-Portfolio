@@ -23,7 +23,7 @@ def test_count_word_matches(text, target, expected):
 # Edge Case Testing : Create a fixture that provides common edge-case inputs,and test the `count_word_matches` function
 # using parameterized tests. Focus on empty inputs, spaces, and punctuation.
 @pytest.fixture
-def sample_edge_cases():
+def sample_edge_cases(scope='function'):
     return [
         ("", "word", 0),                # Empty text
         ("hello world", "", 0),         # Empty target
