@@ -18,33 +18,25 @@ from count_word_matches import count_word_matches
     ]
 )
 def test_count_word_matches(text, target, expected):
-    assert count_word_matches(text, target) == expected
+     assert count_word_matches(text, target) == expected
 
 # Edge Case Testing : Create a fixture that provides common edge-case inputs,and test the `count_word_matches` function
 # using parameterized tests. Focus on empty inputs, spaces, and punctuation.
-@pytest.fixture
-def sample_edge_cases(scope='function'):
-    return [
-        ("", "word", 0),                # Empty text
-        ("hello world", "", 0),         # Empty target
-        ("", "", 0),                    # Both empty
-        ("hello  world", "world", 1),   # Multiple spaces
-        (" cat ", "cat", 1),            # Leading/trailing spaces
-        ("cat,dog cat", "cat", 2),      # Punctuation not handled, comma is part of "cat,"
-        ("x y z", "x", 1),              # Single character
-    ]
-
-# Parameterized test using the fixture values
-@pytest.mark.parametrize("text, target, expected", [
-    ("", "word", 0),
-    ("hello world", "", 0),
-    ("", "", 0),
-    ("hello  world", "world", 1),
-    (" cat ", "cat", 1),
-    ("cat,dog cat", "cat", 1),
-    ("x y z", "x", 1),
+@pytest.fixture(params=[
+    ("", "word", 0),                # Empty text
+    ("hello world", "", 0),         # Empty target
+    ("", "", 0),                    # Both empty
+    ("hello  world", "world", 1),   # Multiple spaces
+    (" cat ", "cat", 1),            # Leading/trailing spaces
+    ("cat,dog cat", "cat", 1),      # Punctuation not handled
+    ("x y z", "x", 1),              # Single character
 ])
-def test_count_word_matches(text, target, expected):
+def edge_case_data(request):
+    return request.param
+
+# Parameterized test using the fixture
+def test_count_word_matches_edge_case(edge_case_data):
+    text, target, expected = edge_case_data
     assert count_word_matches(text, target) == expected
 
 #Test the function for invalid inputs like None, integers, or lists to ensure it raises the appropriate exceptions.
