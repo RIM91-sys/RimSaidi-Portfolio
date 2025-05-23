@@ -30,7 +30,7 @@ def test_register_user(driver):
     name_field.send_keys("Rim")
 
     email_field = driver.find_element(By.XPATH, "//input[@data-qa='signup-email']")
-    email_field.send_keys("Rim.@gmail.com")
+    email_field.send_keys("Rim2.@gmail.com")
 
     signup_button = driver.find_element(By.XPATH, "//button[text()='Signup']")
     signup_button.click()
@@ -107,6 +107,6 @@ def test_register_user(driver):
     # 9. Final continue
     final_continue_button = driver.find_element(By.XPATH, "//a[@data-qa='continue-button']")
     final_continue_button.click()
-    time.sleep(2)
+    #time.sleep(2)
 
     driver.quit()
