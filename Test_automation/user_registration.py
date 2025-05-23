@@ -1,9 +1,9 @@
-from selenium.webdriver.support.ui import Select
+from selenium.webdriver.support.ui import Select, WebDriverWait
+from selenium.common.exceptions import TimeoutException
 import time
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 @pytest.fixture(scope="function")
@@ -15,7 +15,7 @@ def driver():
         WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, "//button[contains(@class, 'fc-cta-consent')]"))
         ).click()
-    except:
+    except TimeoutException:
         pass
     yield driver
     driver.quit()
@@ -26,37 +26,47 @@ def test_register_user(driver):
 
     # 2. Fill New User Signup! (name and email)
     name_field = driver.find_element(By.NAME, "name")
-    email_field = driver.find_element(By.XPATH, "//input[@data-qa='signup-email']")
-    signup_button = driver.find_element(By.XPATH, "//button[text()='Signup']")
-
     name_field.send_keys("Rim")
+
+    email_field = driver.find_element(By.XPATH, "//input[@data-qa='signup-email']")
     email_field.send_keys("Rim.@gmail.com")
+
+    signup_button = driver.find_element(By.XPATH, "//button[text()='Signup']")
     signup_button.click()
+
+
 
     # 3. Fill Account Information
     title_box = driver.find_element(By.ID, "id_gender2")
+    title_box.click()
+
     password_field = driver.find_element(By.ID, "password")
+    password_field.send_keys("123rim.")
+
     Select(driver.find_element(By.ID, "days")).select_by_value("1")
     Select(driver.find_element(By.ID, "months")).select_by_value("5")
     Select(driver.find_element(By.ID, "years")).select_by_value("1990")
-    time.sleep(2)
-    checkbox1_button = driver.find_element(By.ID, "newsletter")
-    checkbox2_button = driver.find_element(By.ID, "optin")
 
-    title_box.click()
-    password_field.send_keys("123rim.")
-    checkbox1_button.click()
-    checkbox2_button.click()
+    checkbox1_button = driver.find_element(By.ID, "newsletter")
+    driver.execute_script("arguments[0].click();", checkbox1_button)
+
+    checkbox2_button = driver.find_element(By.ID, "optin")
+    driver.execute_script("arguments[0].click();", checkbox2_button)
 
     # 4. Fill Address Information
-    time.sleep(2)
     first_name_field = driver.find_element(By.ID, "first_name")
+    time.sleep(2)
+
     first_name_field.send_keys("Rim")
 
     last_name_field = driver.find_element(By.ID, "last_name")
+    time.sleep(2)
+
     last_name_field.send_keys("Saidi")
 
     company_field = driver.find_element(By.ID, "company")
+    time.sleep(2)
+
     company_field.send_keys("xxx")
 
 
@@ -83,8 +93,9 @@ def test_register_user(driver):
 
 
     # 5. Create account
-    time.sleep(2)
     create_account_button= driver.find_element(By.XPATH, "//button[text()='Create Account']")
+    time.sleep(2)
+
     create_account_button.click()
 
 
@@ -104,5 +115,6 @@ def test_register_user(driver):
     # 9. Final continue
     final_continue_button = driver.find_element(By.XPATH, "//a[@data-qa='continue-button']")
     final_continue_button.click()
+    time.sleep(2)
 
     driver.quit()
