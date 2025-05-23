@@ -19,6 +19,7 @@ def driver():
         pass
     yield driver
     driver.quit()
+
 def test_register_user(driver):
     # 1. Signup / Login
     signup_login_button = driver.find_element(By.XPATH, "//a[@href='/login']")
@@ -33,8 +34,6 @@ def test_register_user(driver):
 
     signup_button = driver.find_element(By.XPATH, "//button[text()='Signup']")
     signup_button.click()
-
-
 
     # 3. Fill Account Information
     title_box = driver.find_element(By.ID, "id_gender2")
@@ -56,17 +55,14 @@ def test_register_user(driver):
     # 4. Fill Address Information
     first_name_field = driver.find_element(By.ID, "first_name")
     time.sleep(2)
-
     first_name_field.send_keys("Rim")
 
     last_name_field = driver.find_element(By.ID, "last_name")
     time.sleep(2)
-
     last_name_field.send_keys("Saidi")
 
     company_field = driver.find_element(By.ID, "company")
     time.sleep(2)
-
     company_field.send_keys("xxx")
 
 
@@ -90,14 +86,10 @@ def test_register_user(driver):
     mobile_number_field = driver.find_element(By.ID, "mobile_number")
     mobile_number_field.send_keys("0123876543")
 
-
-
     # 5. Create account
     create_account_button= driver.find_element(By.XPATH, "//button[text()='Create Account']")
     time.sleep(2)
-
     create_account_button.click()
-
 
     # 6. Continue
     continue_button = driver.find_element(By.XPATH, "//a[@data-qa='continue-button']")
