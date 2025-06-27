@@ -1,0 +1,15 @@
+VALID_USERNAME = 'user.rym@gmail.com'
+INVALID_USERNAME = 'user@exa.com'
+VALID_PASSWORD = 'user123'
+INVALID_PASSWORD = 'abc123'
+INVALID_USERNAME_OR_PASSWORD_ALERT = 'invalid username or password'
+VALID_DOB = 1-1-2007
+INVALID_DOB = "01-01-2008"
+ORANGES_PRODUCT= "oranges"
+GALA_APPLE_PRODUCT = "Gala Apples"
+VALID_REVIEW_TEXT = 'great product'
+REVIEW_RESTRICTION_MESSAGE = 'You have already reviewed this product.'
+NEED_TO_BUY_MESSAGE = 'You need to buy this product to tell us your opinion!'
+RATING_STAR = 5
+UNDERAGE_MESSAGE= "You are underage. You can still browse the site, but you will not be able to view alcohol products."
+ACCESS_MESSAGE = "You are of age. You can now view all products, even alcohol products."
