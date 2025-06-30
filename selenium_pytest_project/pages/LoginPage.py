@@ -7,7 +7,6 @@ class LoginPage(BasePage):
       PASSWORD_FIELD_LOCATOR = (By.XPATH, "//input[@type='password']")
       SIGNIN_BUTTON_LOCATOR = (By.XPATH, "//button[@type='submit' and text()='Sign In']")
       ERROR_ALERT_LOCATOR = (By.XPATH, "//div[@role='status']")
-      PAGE_URL = 'https://grocerymate.masterschool.com/auth'
 
       def __init__(self, driver):
         super().__init__(driver)

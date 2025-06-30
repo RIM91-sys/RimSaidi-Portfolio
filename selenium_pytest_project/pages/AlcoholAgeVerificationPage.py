@@ -14,7 +14,6 @@ class AlcoholAgeVerificationPage(BasePage):
     ACCESS_GRANTED_MESSAGE_LOCATOR = (By.XPATH, "//div[contains(@class, 'go3958317564') and contains(text(), 'of age')]")
     ALCOHOL_PRODUCT_BUTTON_LOCATOR = (By.XPATH, "//div[@class='widget widget-menu']//ul/li[10]/a[text()='Alocohol']")
 
-    PAGE_URL = 'https://grocerymate.masterschool.com/auth'
 
     def __init__(self, driver):
         super().__init__(driver)

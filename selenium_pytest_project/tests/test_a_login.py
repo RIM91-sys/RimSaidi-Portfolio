@@ -9,7 +9,7 @@ import utils.constants as constants
 
 @pytest.fixture
 def login_page(driver):
-    driver.get(LoginPage.PAGE_URL)
+    driver.get(constants.LOGIN_PAGE_URL)
     return LoginPage(driver)
 
 

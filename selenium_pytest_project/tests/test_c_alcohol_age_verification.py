@@ -8,7 +8,7 @@ import utils.constants as constants
 
 @pytest.fixture
 def alcohol_page(driver):
-    driver.get(AlcoholAgeVerificationPage.PAGE_URL)
+    driver.get(constants.LOGIN_PAGE_URL)
     return AlcoholAgeVerificationPage(driver)
 
 @pytest.mark.parametrize("dob, expected_access_message, expected_error_message", [

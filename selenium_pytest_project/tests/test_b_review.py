@@ -10,7 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 @pytest.fixture
 def review_page(driver):
-    driver.get(ReviewPage.PAGE_URL)
+    driver.get(constants.LOGIN_PAGE_URL)
     return ReviewPage(driver)
 
 @pytest.mark.parametrize("mode, product, review_text, rating, expected_message", [
@@ -41,40 +41,6 @@ def test_review_behaviors(driver, review_page, login_page, mode, product, review
 
     else:
         pytest.fail(f"Unsupported test mode: {mode}")
-
-# # Test Case:Verify review option availability for purchased product
-# def test_review_option_availability(driver, review_page, login_page):
-#
-#       test_login_pom(driver, login_page)
-#       time.sleep(3)
-#
-#       review_page.review_availability(constants.ORANGES_PRODUCT)
-#
-#       review_box= WebDriverWait(driver, 10).until(
-#          EC.element_to_be_clickable((By.XPATH, "//textarea[contains(@class, 'new-review-form-control') and @placeholder='What is your view?']")))
-#
-#       assert review_box.is_displayed()
-#
-#
-# # Test Case: Verify review option is not available for non-purchased product
-# def test_review_option_not_available(driver, review_page, login_page ):
-#     test_login_pom(driver, login_page)
-#     time.sleep(3)
-#
-#     review_page.review_not_available(constants.GALA_APPLE_PRODUCT)
-#     assert review_page.need_to_buy_message() == constants.NEED_TO_BUY_MESSAGE
-#
-# # Test Case:Verify that user can submit a review for purchased product
-# def test_valid_review(driver, review_page, login_page):
-#     test_login_pom(driver, login_page)
-#     time.sleep(3)
-#
-#     # Arrange
-#     review_page.review_availability(constants.ORANGES_PRODUCT)
-#     review_page.submit_review(constants.VALID_REVIEW_TEXT, constants.RATING_STAR)
-#     time.sleep(3)
-#     assert review_page.review_restriction_message() == constants.REVIEW_RESTRICTION_MESSAGE
-
 
 @pytest.mark.parametrize(
     "comment, rating, expected_error, expected_rating_display, expected_comment_display",

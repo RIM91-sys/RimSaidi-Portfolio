@@ -18,7 +18,6 @@ class CartPage(BasePage):
     REMOVE_PRODUCT_BUTTONS = (By.XPATH, "//div[@class='checkout-card-image-container']/a")
     SHOP_BUTTON_LOCATOR = (By.XPATH, "//a[@href='/store']")
 
-    PAGE_URL = 'https://grocerymate.masterschool.com/auth'
 
     def filter_by_price_5_10(self):
         """Apply a price filter to show products priced between €5 and €10."""

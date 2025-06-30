@@ -10,7 +10,7 @@ import utils.constants as constants
 
 @pytest.fixture
 def shipping_cost_page(driver):
-    driver.get(CartPage.PAGE_URL)
+    driver.get(constants.LOGIN_PAGE_URL)
     return CartPage(driver)
 
 @pytest.mark.parametrize("case", [

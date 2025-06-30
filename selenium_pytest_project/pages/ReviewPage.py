@@ -9,10 +9,8 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 class ReviewPage(BasePage):
       DOB_FIELD_LOCATOR = (By.XPATH, "//input[@type='text' and @placeholder ='DD-MM-YYYY' ]")
       CONFIRM_BUTTON_LOCATOR = (By.XPATH, "//button[text()='Confirm']")
-      # PRODUCT_ORANGE_LOCATOR = (By.XPATH, "//img[@alt='Oranges']")
       SEARCH_BUTTON_LOCATOR = (By.XPATH, "//input[@placeholder='Search Products']")
-      ORANGES_BUTTON_SEARCH_LOCATOR = (By.XPATH, "//div[@class='suggestion-item']/p[strong[text()='Oranges']]")
-      GALA_APPLE_BUTTON_SEARCH_LOCATOR = (By.XPATH, "//div[@class='suggestion-item']/p[strong[text()='Gala Apples']]")
+      PRODUCT_BUTTON_SEARCH_LOCATOR_TEMPLATE = "//div[@class='suggestion-item']/p[strong[text()='{}']]"
       REVIEW_TEXTBOX_LOCATOR = (By.XPATH, "//textarea[contains(@class, 'new-review-form-control') and @placeholder='What is your view?']")
       RATING_STARS_LOCATOR = (By.XPATH, '//div[@class="interactive-rating"]/span[contains(@class, "star") and contains(@class, "empty")]')
       SEND_REVIEW_BUTTON_LOCATOR = (By.XPATH, "//button[@class='new-review-btn new-review-btn-send']")
@@ -33,8 +31,6 @@ class ReviewPage(BasePage):
       ACCESS_GRANTED_MESSAGE_LOCATOR = (By.XPATH, "//div[@class='go3958317564' and contains(text(), 'You are of age')]")
 
 
-      PAGE_URL = 'https://grocerymate.masterschool.com/auth'
-
       def __init__(self, driver):
           super().__init__(driver)
 
@@ -42,23 +38,20 @@ class ReviewPage(BasePage):
           """Enter a product name in the search input field."""
           self.enter_text(self.SEARCH_BUTTON_LOCATOR, search_product)
 
-      def click_oranges(self):
-          """Click on the oranges button from the search results."""
-          self.click(self.ORANGES_BUTTON_SEARCH_LOCATOR)
+      def click_product(self, product_name):
+          """Click on the product button from the search results."""
+          locator = (By.XPATH, self.PRODUCT_BUTTON_SEARCH_LOCATOR_TEMPLATE.format(product_name))
+          self.click(locator)
 
       def review_availability(self, search_product):
-          """Search for a product and click the oranges result."""
+          """Search for a product and click the corresponding result."""
           self.search_product(search_product)
-          self.click_oranges()
-
-      def click_gala_apple(self):
-          """Click on the Gala Apple button from the search results."""
-          self.click(self.GALA_APPLE_BUTTON_SEARCH_LOCATOR)
+          self.click_product(search_product)
 
       def review_not_available(self, search_product):
           """Search for a product and click the Gala Apple result."""
           self.search_product(search_product)
-          self.click_gala_apple()
+          self.click_product(search_product)
 
       def need_to_buy_message(self):
           """Retrieve the 'Need to Buy' message from the page."""
