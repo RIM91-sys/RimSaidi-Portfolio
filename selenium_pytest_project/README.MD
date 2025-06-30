@@ -1,4 +1,4 @@
-# 🧪 Project: Test Automation
+#  Project: Test Automation
 
 This project involved the automation of test cases that were originally created as part of the [Test Plan & Test Case Design homework](https://www.notion.so/212fc8ca6c014f7d9ca860ba5477f83e?pvs=21).  
 The system under test was [**GroceryMate**](https://grocerymate.masterschool.com), a web-based grocery shopping platform.
